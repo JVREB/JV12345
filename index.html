@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JV Motorcycle Shop</title>
+
+    <style>
+        body {
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background: #181818;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid red;
+        }
+
+        h1, h2 {
+            color: red;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        .login-box {
+            width: 300px;
+            max-width: 85%;
+            margin: 60px auto;
+            padding: 25px;
+            background: #202020;
+            border: 1px solid red;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            background: #101010;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #error {
+            color: red;
+            display: none;
+            margin: 5px 0 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JV MOTORCYCLE SHOP</h1>
+    </nav>
+</header>
+
+<div class="login-box">
+    <h2>Login Account</h2>
+
+    <form onsubmit="return login(event)">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+
+        <p id="error">Wrong username or password.</p>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+
+<script>
+    const correctUsername = "jv";
+    const correctPassword = "jv123";
+
+    function login(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const error = document.getElementById("error");
+
+        if (username === correctUsername && password === correctPassword) {
+            error.style.display = "none";
+            window.location.href = "homepage.html";
+        } else {
+            error.style.display = "block";
+            document.getElementById("password").value = "";
+        }
+    }
+</script>
+
+</body>
+</html>

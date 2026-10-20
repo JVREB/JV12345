@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - JV Motorcycle Shop</title>
+
+    <style>
+        body {
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header, footer {
+            background: #181818;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            border-bottom: 3px solid red;
+        }
+
+        h1, h2 {
+            color: red;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            background: #202020;
+            color: white;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+
+        button {
+            background: red;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JV MOTORCYCLE SHOP</h1>
+
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Contact Us</h2>
+
+    <p>Send us your questions or suggestions.</p>
+
+    <form onsubmit="event.preventDefault(); alert('Demo only: Message not sent.');">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</main>
+
+<footer>
+    <p></p>
+</footer>
+
+</body>
+</html>
